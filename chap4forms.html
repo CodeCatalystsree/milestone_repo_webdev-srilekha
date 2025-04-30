@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forms in HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    div {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f04e4e;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Forms in HTML</h1>
+
+  <form action="/submit.php" method="post">
+    
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Enter your name" required>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="Enter your email" required>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="Enter your password" required>
+    </div>
+
+    <div>
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="tel" placeholder="Enter your phone number">
+    </div>
+
+    <div>
+      <label for="dob">Date of Birth</label>
+      <input id="dob" name="dob" type="date">
+    </div>
+
+    <div>
+      <label for="gender">Gender</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male" style="display:inline;">Male</label>
+
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female" style="display:inline;">Female</label>
+
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other" style="display:inline;">Other</label>
+    </div>
+
+    <div>
+      <label for="hobbies">Hobbies</label>
+      <input type="checkbox" id="reading" name="hobbies" value="reading">
+      <label for="reading" style="display:inline;">Reading</label>
+
+      <input type="checkbox" id="music" name="hobbies" value="music">
+      <label for="music" style="display:inline;">Music</label>
+
+      <input type="checkbox" id="sports" name="hobbies" value="sports">
+      <label for="sports" style="display:inline;">Sports</label>
+    </div>
+
+    <div>
+      <label for="country">Select Country</label>
+      <select id="country" name="country">
+        <option value="">--Select--</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="bio">Short Bio</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Write something about yourself..."></textarea>
+    </div>
+
+    <div>
+      <label for="file">Upload File</label>
+      <input type="file" id="file" name="file">
+    </div>
+
+    <div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+
+  </form>
+</body>
+</html>
